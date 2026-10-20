@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahlzeit – die Rezept-App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div id="main-view">
+            <header>
+                <h1>Mahlzeit</h1>
+                <p class="subtitle">Was kochen wir heute? Suche nach einem Gericht oder lass dich überraschen.</p>
+                
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="z. B. Arrabiata oder Kebap">
+                    <button class="btn-primary" id="search-btn">🔍 Suchen</button>
+                    <button class="btn-secondary" id="random-btn">🎲 Überrasch mich</button>
+                </div>
+
+                <div class="categories-container" id="categories-container">
+                    <button class="category-chip active" id="btn-all">Alle</button>
+                    <button class="category-chip">Beef</button>
+                    <button class="category-chip">Chicken</button>
+                    <button class="category-chip">Dessert</button>
+                    <button class="category-chip">Pasta</button>
+                    <button class="category-chip">Seafood</button>
+                    <button class="category-chip">Vegetarian</button>
+                    <button class="category-chip">Turkish</button>
+                </div>
+            </header>
+
+            <main>
+                <div id="loading" class="message hidden">Lade Rezepte...</div>
+                <div id="recipes-grid" class="recipes-grid">
+                </div>
+            </main>
+        </div>
+        <div id="detail-view" class="detail-view hidden">
+            <button class="btn-secondary" id="back-btn">← Zurück zur Übersicht</button>
+            <div id="recipe-detail-content">
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
